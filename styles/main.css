@@ -1,0 +1,166 @@
+@import url("/resources/fonts/Silka/silka_stylesheet.css");
+@import url("/resources/fonts/Archia/archia_stylesheet.css");
+:not(.no-animate) {
+  transition: 0.4s ease-in-out;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-family: Archia, sans-serif;
+}
+
+.dark {
+  background: #00131C;
+  color: #FFF;
+}
+
+.text-muted {
+  color: #AAA !important;
+}
+
+.xxxx {
+  height: 16px;
+}
+
+.mockup {
+  width: 500px;
+}
+
+.archia {
+  font-family: Archia, sans-serif;
+}
+
+.silka {
+  font-family: Silka, sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(30deg, #00EFFB, #8649E1, #F900E3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#arrow {
+  position: absolute;
+  right: 67px;
+  margin: 20px;
+  bottom: 100px;
+  background: #FFF;
+  padding: 20px;
+  animation-delay: 2s;
+}
+
+.logo_container {
+  width: calc(100% - 60px);
+  position: absolute;
+  left: 30px;
+  padding: 20px;
+  top: 0;
+}
+
+.mostscreen {
+  width: 100vw;
+  height: 80vh;
+}
+
+.gradient-top-border {
+  position: relative;
+}
+.gradient-top-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: -2px;
+  background: linear-gradient(90deg, #00EFFB, #8649E1, #F900E3);
+  z-index: -1;
+}
+
+.gradient-border-round {
+  position: relative;
+  border-radius: 7px;
+}
+.gradient-border-round:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 9px;
+  background: linear-gradient(30deg, #00EFFB, #8649E1, #F900E3);
+  z-index: -1;
+}
+
+#logo_head {
+  width: 350px;
+  background: #FFF;
+  padding: 20px;
+}
+
+#full-head {
+  width: calc(100vw - 200px);
+  height: calc(95vh - 200px);
+  border: 1px solid #CCC;
+  margin: 100px;
+}
+
+#block_mockup {
+  width: 70%;
+  flex-grow: 1;
+}
+
+#cta {
+  width: 0;
+  height: 0;
+  animation: display-later 1s ease-in-out 2s;
+  animation-fill-mode: forwards;
+}
+
+#dfinity-logo {
+  height: 32px;
+}
+
+.btn-gradient {
+  position: relative;
+  border-radius: 7px;
+  background: #FFF;
+}
+.btn-gradient:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: -3px;
+  border-radius: 9px;
+  background: linear-gradient(30deg, #00EFFB, #8649E1, #F900E3);
+}
+
+@keyframes display-later {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: inherit;
+    height: inherit;
+  }
+}
+@media (max-width: 768px) {
+  #block_mockup {
+    width: 90% !important;
+  }
+
+  #logo_head {
+    width: 70% !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
