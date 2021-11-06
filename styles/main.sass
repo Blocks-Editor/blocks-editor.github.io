@@ -74,8 +74,10 @@ html, body
     right: 0
     bottom: 0
     margin-top: -2px
-    background: $blocks-gradient-straight
+    background: $blocks-gradient-repeat
+    width: 200%
     z-index: -1
+    animation: scroll 5s infinite linear
 
 .gradient-border-round
   position: relative
@@ -155,6 +157,12 @@ html, body
     margin: -3px
     border-radius: 9px
     background: $blocks-gradient
+
+@keyframes scroll
+  from
+    transform: translateX(0)
+  to
+    transform: translateX(-100vw)
 
 @keyframes fade-in
   from
