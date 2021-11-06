@@ -155,6 +155,11 @@ html, body {
   border-radius: 7px;
   background: #FFF;
 }
+.btn-gradient:disabled {
+  opacity: 1;
+  background: #F0F0F0;
+  color: #888;
+}
 .btn-gradient:before {
   content: "";
   position: absolute;
