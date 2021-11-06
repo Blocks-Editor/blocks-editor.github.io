@@ -11,7 +11,11 @@ $head-margin: 100px
 html, body
   width: 100vw
   height: 100vh
+  overflow-x: hidden
   font-family: Archia, sans-serif
+
+.viewport
+  position: relative
 
 .dark
   background: $dark
@@ -33,23 +37,25 @@ html, body
   font-family: Silka, sans-serif
 
 .gradient-text
+  color: $accent-blue
   background: $blocks-gradient
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 
 #arrow
   position: absolute
-  right: 67px
-  margin: 20px
-  bottom: 100px
+  right: 0
+  margin-bottom: -40px
+  margin-right: -60px
+  bottom: 0
   background: $light
   padding: 20px
-  animation-delay: 2s
 
 .logo_container
-  width: calc(100% - 60px)
+  width: calc(100vh - 60px)
   position: absolute
-  left: 30px
+  left: 0
+  margin: -80px
   padding: 20px
   top: 0
 
@@ -93,17 +99,31 @@ html, body
   padding: 20px
 
 #full-head
+  position: relative
   width: calc(100vw - ($head-margin * 2))
   height: calc(95vh - ($head-margin * 2))
-  border: 1px solid #CCC
   margin: $head-margin
+  background: $light
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: #DDD
+    opacity: 0
+    margin: -1px
+    z-index: -1
+    animation: fade-in 2s 5s forwards
 
 #block_mockup
   width: 70%
   flex-grow: 1
 
-//#macbook-mockup
-//  transform: translateX(500)
+#macbook-mockup
+  transform: translateX(350px) scale(1.2)
 
 #cta
   width: 0
@@ -130,6 +150,12 @@ html, body
     margin: -3px
     border-radius: 9px
     background: $blocks-gradient
+
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
 
 @keyframes display-later
   from

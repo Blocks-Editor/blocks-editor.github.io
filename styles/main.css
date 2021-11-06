@@ -7,7 +7,12 @@
 html, body {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   font-family: Archia, sans-serif;
+}
+
+.viewport {
+  position: relative;
 }
 
 .dark {
@@ -36,6 +41,7 @@ html, body {
 }
 
 .gradient-text {
+  color: #00EFFB;
   background: linear-gradient(30deg, #00EFFB, #8649E1, #F900E3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -43,18 +49,19 @@ html, body {
 
 #arrow {
   position: absolute;
-  right: 67px;
-  margin: 20px;
-  bottom: 100px;
+  right: 0;
+  margin-bottom: -40px;
+  margin-right: -60px;
+  bottom: 0;
   background: #FFF;
   padding: 20px;
-  animation-delay: 2s;
 }
 
 .logo_container {
-  width: calc(100% - 60px);
+  width: calc(100vh - 60px);
   position: absolute;
-  left: 30px;
+  left: 0;
+  margin: -80px;
   padding: 20px;
   top: 0;
 }
@@ -103,15 +110,33 @@ html, body {
 }
 
 #full-head {
+  position: relative;
   width: calc(100vw - 200px);
   height: calc(95vh - 200px);
-  border: 1px solid #CCC;
   margin: 100px;
+  background: #FFF;
+}
+#full-head:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #DDD;
+  opacity: 0;
+  margin: -1px;
+  z-index: -1;
+  animation: fade-in 2s 5s forwards;
 }
 
 #block_mockup {
   width: 70%;
   flex-grow: 1;
+}
+
+#macbook-mockup {
+  transform: translateX(350px) scale(1.2);
 }
 
 #cta {
@@ -143,6 +168,14 @@ html, body {
   background: linear-gradient(30deg, #00EFFB, #8649E1, #F900E3);
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes display-later {
   from {
     width: 0;
