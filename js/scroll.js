@@ -11,11 +11,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         })
         .addTo(controller);
 
+    const tween = new TweenMax.to("#macbook-mockup", 1, {css: { transform: 'translateX(0)', opacity: 1}})
+
     new ScrollMagic.Scene({
         triggerElement: "#slide-1",
+        offset: -400,
         triggerHook: 0,
         duration: 300
     })
-        .setTween(new TweenMax.to("#macbook-mockup", 0.5, {css: {transform: 'translate3d(-500px, 0, 0)'}}))
+        .setTween(tween)
         .addTo(controller);
 });
