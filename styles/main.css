@@ -10802,11 +10802,6 @@ html, body {
   top: 0;
 }
 
-.translate-0 {
-  transform: translateX(0);
-  opacity: 1;
-}
-
 .mostscreen {
   width: 100vw;
   min-height: 80vh;
@@ -10834,7 +10829,11 @@ html, body {
   position: relative;
   border-radius: 7px;
 }
-.gradient-border-round:after {
+
+.untranslate {
+  animation: untranslate 0.7s ease-in-out forwards;
+}
+.untranslate:after {
   content: "";
   position: absolute;
   top: 0;
@@ -10879,7 +10878,7 @@ html, body {
 }
 
 #macbook-mockup {
-  transform: translateX(200px);
+  transform: translateX(100px);
   width: 300px;
   opacity: 0;
 }
@@ -10923,6 +10922,16 @@ html, body {
   }
   to {
     transform: translateX(-100vw);
+  }
+}
+@keyframes untranslate {
+  from {
+    transform: translateX(100);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes fade-in {
