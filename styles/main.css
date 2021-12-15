@@ -10755,8 +10755,24 @@ html, body {
   font-family: Archia, sans-serif;
 }
 
+a {
+  color: #00EFFB;
+}
+a:hover {
+  color: #00EFFB;
+  opacity: 0.8;
+}
+
 .viewport {
   position: relative;
+}
+
+.font-weight-light {
+  font-weight: 100;
+}
+
+.no-select {
+  user-select: none;
 }
 
 .dark {
@@ -10768,7 +10784,7 @@ html, body {
   color: #AAA !important;
 }
 
-.xxxx {
+.top-decor {
   height: 16px;
 }
 
@@ -10785,6 +10801,19 @@ html, body {
   background: linear-gradient(30deg, #00EFFB, #8649E1, #F900E3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.circle-num {
+  max-width: 150px;
+}
+
+.s2-tile {
+  min-width: 300px;
+}
+
+.grid-columns {
+  display: grid;
+  gap: 2em;
 }
 
 #arrow {
@@ -10809,6 +10838,7 @@ html, body {
 
 .gradient-top-border {
   position: relative;
+  margin-bottom: 2px;
 }
 .gradient-top-border:after {
   content: "";
@@ -10823,11 +10853,38 @@ html, body {
   width: 200%;
   z-index: -1;
   animation: scroll 5s infinite linear;
+  animation-delay: 1ms;
+}
+
+.bump {
+  animation: bump 0.7s ease-in-out;
+}
+
+.delay-1s {
+  animation-delay: 0.5s;
+}
+
+.delay-2s {
+  animation-delay: 1s;
 }
 
 .gradient-border-round {
   position: relative;
   border-radius: 7px;
+}
+
+.card-ish {
+  border: 1px solid #EEE;
+  border-radius: 2rem;
+  background: #FFFFFF;
+  box-shadow: 5px 5px 10px #F1F1F1;
+}
+
+.hover-scale {
+  transition: 0.3s;
+}
+.hover-scale:hover {
+  transform: scale(1.1);
 }
 
 .untranslate {
@@ -10893,10 +10950,27 @@ html, body {
   height: 24px;
 }
 
+#footer-blocks-icon {
+  height: 48px;
+  pointer-events: none;
+}
+
+#footer {
+  margin-bottom: 0;
+  background: linear-gradient(#022030, #00131C);
+}
+
+#inline-editor {
+  min-height: 500px;
+}
+
 .btn-gradient {
   position: relative;
   border-radius: 7px;
   background: #FFF;
+}
+.btn-gradient.dark {
+  background: #00131C;
 }
 .btn-gradient:disabled {
   opacity: 1;
@@ -10915,6 +10989,9 @@ html, body {
   border-radius: 9px;
   background: linear-gradient(30deg, #00EFFB, #8649E1, #F900E3);
 }
+.btn-gradient:hover {
+  opacity: 1;
+}
 
 @keyframes scroll {
   from {
@@ -10932,6 +11009,20 @@ html, body {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  55% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes fade-in {
@@ -10953,6 +11044,11 @@ html, body {
   }
 }
 @media (min-width: 992px) {
+  .grid-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
   .logo_container {
     margin: -80px;
     padding: 20px;

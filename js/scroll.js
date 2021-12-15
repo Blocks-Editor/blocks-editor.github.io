@@ -24,4 +24,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.getElementById("macbook-mockup").classList.add("untranslate");
         })
         .addTo(controller);
+
+
+    new ScrollMagic.Scene({
+        triggerElement: "#slide-2",
+        offset: 300
+    })
+        .on("start", () => {
+            document.getElementById("slide-2-slashes").classList.add("start");
+            document.getElementById("card-1").classList.add("bump");
+            document.getElementById("card-2").classList.add("bump", "delay-1s");
+            document.getElementById("card-3").classList.add("bump", "delay-2s");
+            setTimeout(()=> {
+                document.getElementById("card-1").classList.add("hover-scale");
+                document.getElementById("card-2").classList.add("hover-scale");
+                document.getElementById("card-3").classList.add("hover-scale");
+            }, 3000);
+        })
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#slide-3',
+        offset: 300
+    })
+        .on("start", () => {
+            document.getElementById("slide-3-circles").classList.add('start');
+        })
+        .addTo(controller);
 });
