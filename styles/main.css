@@ -10768,7 +10768,7 @@ a:hover {
 }
 
 .font-weight-light {
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .no-select {
@@ -11086,6 +11086,11 @@ a:hover {
   }
   #full-head:after {
     background: #DDD;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  .font-weight-light {
+    font-weight: 100 !important;
   }
 }
 
