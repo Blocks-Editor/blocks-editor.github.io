@@ -10881,6 +10881,15 @@ a:hover {
   box-shadow: 5px 5px 10px #F1F1F1;
 }
 
+.btn-outline-primary {
+  color: #00EFFB;
+  border-color: #00EFFB;
+}
+.btn-outline-primary:hover {
+  background-color: #00EFFB !important;
+  color: #00131C !important;
+}
+
 .hover-scale {
   transition: 0.3s;
 }
@@ -11089,7 +11098,7 @@ a:hover {
     background: #DDD;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (min-width: 992px) {
   .font-weight-light {
     font-weight: 100 !important;
   }
