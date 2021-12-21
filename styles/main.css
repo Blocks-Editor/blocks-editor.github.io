@@ -11102,10 +11102,5 @@ a:hover {
     background: #DDD;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 992px), (min-resolution: 120dpi) and (min-width: 992px) {
-  .font-weight-light {
-    font-weight: 100 !important;
-  }
-}
 
 /*# sourceMappingURL=main.css.map */
