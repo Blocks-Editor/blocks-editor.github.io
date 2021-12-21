@@ -10869,6 +10869,10 @@ a:hover {
   animation-delay: 1s;
 }
 
+.delay-2pt5s {
+  animation-delay: 2.5s;
+}
+
 .gradient-border-round {
   position: relative;
   border-radius: 7px;
