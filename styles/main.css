@@ -10869,6 +10869,10 @@ a:hover {
   animation-delay: 1s;
 }
 
+.delay-2pt5s {
+  animation-delay: 2.5s;
+}
+
 .gradient-border-round {
   position: relative;
   border-radius: 7px;
@@ -10879,6 +10883,15 @@ a:hover {
   border-radius: 2rem;
   background: #FFFFFF;
   box-shadow: 5px 5px 10px #F1F1F1;
+}
+
+.btn-outline-primary {
+  color: #00EFFB;
+  border-color: #00EFFB;
+}
+.btn-outline-primary:hover {
+  background-color: #00EFFB !important;
+  color: #00131C !important;
 }
 
 .hover-scale {
@@ -11087,11 +11100,6 @@ a:hover {
   }
   #full-head:after {
     background: #DDD;
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  .font-weight-light {
-    font-weight: 100 !important;
   }
 }
 

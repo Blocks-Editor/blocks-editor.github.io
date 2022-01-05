@@ -108,6 +108,9 @@ a
 .delay-2s
   animation-delay: 1s
 
+.delay-2pt5s
+  animation-delay: 2.5s
+
 .gradient-border-round
   position: relative
   border-radius: 7px
@@ -117,6 +120,14 @@ a
   border-radius: 2rem
   background: #FFFFFF
   box-shadow: 5px 5px 10px #F1F1F1
+
+.btn-outline-primary
+  color: $accent-blue
+  border-color: $accent-blue
+
+  &:hover
+    background-color: $accent-blue !important
+    color: $dark !important
 
 .hover-scale
   transition: 0.3s
@@ -293,8 +304,8 @@ a
     &:after
       background: #DDD
 
-@media(-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+@media(-webkit-min-device-pixel-ratio: 2) and (min-width: 992px), (min-resolution: 120dpi) and (min-width: 992px)
   .font-weight-light
-    font-weight: 100 !important
+    //font-weight: 100 !important
 
 
