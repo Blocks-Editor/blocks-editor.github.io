@@ -14,6 +14,9 @@ html, body
   overflow-x: hidden
   font-family: Archia, sans-serif
 
+object
+  pointer-events: none
+
 a
   color: $accent-blue
 
@@ -23,6 +26,9 @@ a
 
 .viewport
   position: relative
+
+.clickable
+  cursor: pointer
 
 .font-weight-light
   font-weight: 300
@@ -82,7 +88,7 @@ a
 
 .gradient-top-border
   position: relative
-  margin-bottom: 2px
+  margin-top: 2px
 
   &:after
     content: ''
@@ -201,6 +207,9 @@ a
 
 #inline-editor
   min-height: 500px
+
+.social-icon
+  height: 40px
 
 .btn-gradient
   position: relative

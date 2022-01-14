@@ -10755,6 +10755,10 @@ html, body {
   font-family: Archia, sans-serif;
 }
 
+object {
+  pointer-events: none;
+}
+
 a {
   color: #00EFFB;
 }
@@ -10765,6 +10769,10 @@ a:hover {
 
 .viewport {
   position: relative;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 .font-weight-light {
@@ -10839,7 +10847,7 @@ a:hover {
 
 .gradient-top-border {
   position: relative;
-  margin-bottom: 2px;
+  margin-top: 2px;
 }
 .gradient-top-border:after {
   content: "";
@@ -10976,6 +10984,10 @@ a:hover {
 
 #inline-editor {
   min-height: 500px;
+}
+
+.social-icon {
+  height: 40px;
 }
 
 .btn-gradient {
