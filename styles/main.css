@@ -10987,7 +10987,7 @@ a:hover {
 }
 
 .social-icon {
-  height: 40px;
+  height: 32px;
 }
 
 .btn-gradient {
@@ -11078,6 +11078,10 @@ a:hover {
   .logo_container {
     margin: -80px;
     padding: 20px;
+  }
+
+  .social-icon {
+    height: 40px;
   }
 
   #arrow {
